@@ -14,9 +14,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="Fyc-5E-fIx">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Estas en cartelera" id="G3g-Bo-yX5"/>
+                            </items>
+                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaFuncion" rowHeight="181" id="t7G-zE-N5F" customClass="FuncionTableViewCell" customModule="Cartelera" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="181"/>
+                                <rect key="frame" x="0.0" y="72" width="320" height="181"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t7G-zE-N5F" id="zyf-Rl-u7d">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="181"/>
@@ -68,9 +75,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="mb2-QZ-29e">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Estas en dulceria" id="gEa-S7-Q36">
+                                    <barButtonItem key="rightBarButtonItem" title="Item" image="cart" catalog="system" id="sXT-wc-r1U"/>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaDulce" rowHeight="122" id="8an-Kd-y5B" customClass="DulceTableViewCell" customModule="Cartelera" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="122"/>
+                                <rect key="frame" x="0.0" y="72" width="320" height="122"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8an-Kd-y5B" id="eZu-FB-47g">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="122"/>
@@ -137,6 +153,7 @@
     <resources>
         <image name="bag" catalog="system" width="64" height="64"/>
         <image name="bag.fill" catalog="system" width="64" height="64"/>
+        <image name="cart" catalog="system" width="64" height="50"/>
         <image name="video" catalog="system" width="64" height="40"/>
         <image name="video.fill" catalog="system" width="64" height="40"/>
     </resources>
