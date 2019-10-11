@@ -13,6 +13,13 @@
 		0E67BCC9234FDB4C006A8EC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E67BCC7234FDB4C006A8EC1 /* Main.storyboard */; };
 		0E67BCCB234FDB4E006A8EC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E67BCCA234FDB4E006A8EC1 /* Assets.xcassets */; };
 		0E67BCCE234FDB4E006A8EC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E67BCCC234FDB4E006A8EC1 /* LaunchScreen.storyboard */; };
+		0E67BCD7234FDE20006A8EC1 /* Pelicula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E67BCD6234FDE20006A8EC1 /* Pelicula.swift */; };
+		0E67BCD9234FDE33006A8EC1 /* Sala.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E67BCD8234FDE33006A8EC1 /* Sala.swift */; };
+		0E67BCDB234FDE45006A8EC1 /* Funcion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E67BCDA234FDE45006A8EC1 /* Funcion.swift */; };
+		0E67BCDD234FDE51006A8EC1 /* Cartelera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E67BCDC234FDE51006A8EC1 /* Cartelera.swift */; };
+		0E67BCDF235006F2006A8EC1 /* Decodificador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E67BCDE235006F2006A8EC1 /* Decodificador.swift */; };
+		0E67BCE1235010D8006A8EC1 /* Dulce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E67BCE0235010D8006A8EC1 /* Dulce.swift */; };
+		0E67BCE3235010E2006A8EC1 /* Dulceria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E67BCE2235010E2006A8EC1 /* Dulceria.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		0E67BCCA234FDB4E006A8EC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E67BCCD234FDB4E006A8EC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E67BCCF234FDB4E006A8EC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E67BCD6234FDE20006A8EC1 /* Pelicula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pelicula.swift; sourceTree = "<group>"; };
+		0E67BCD8234FDE33006A8EC1 /* Sala.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sala.swift; sourceTree = "<group>"; };
+		0E67BCDA234FDE45006A8EC1 /* Funcion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Funcion.swift; sourceTree = "<group>"; };
+		0E67BCDC234FDE51006A8EC1 /* Cartelera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cartelera.swift; sourceTree = "<group>"; };
+		0E67BCDE235006F2006A8EC1 /* Decodificador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decodificador.swift; sourceTree = "<group>"; };
+		0E67BCE0235010D8006A8EC1 /* Dulce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dulce.swift; sourceTree = "<group>"; };
+		0E67BCE2235010E2006A8EC1 /* Dulceria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dulceria.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 		0E67BCC0234FDB4C006A8EC1 /* Cartelera */ = {
 			isa = PBXGroup;
 			children = (
+				0E67BCD5234FDDFB006A8EC1 /* Modelo */,
 				0E67BCC1234FDB4C006A8EC1 /* AppDelegate.swift */,
 				0E67BCC3234FDB4C006A8EC1 /* SceneDelegate.swift */,
 				0E67BCC5234FDB4C006A8EC1 /* ViewController.swift */,
@@ -63,8 +78,22 @@
 				0E67BCCA234FDB4E006A8EC1 /* Assets.xcassets */,
 				0E67BCCC234FDB4E006A8EC1 /* LaunchScreen.storyboard */,
 				0E67BCCF234FDB4E006A8EC1 /* Info.plist */,
+				0E67BCDE235006F2006A8EC1 /* Decodificador.swift */,
 			);
 			path = Cartelera;
+			sourceTree = "<group>";
+		};
+		0E67BCD5234FDDFB006A8EC1 /* Modelo */ = {
+			isa = PBXGroup;
+			children = (
+				0E67BCD6234FDE20006A8EC1 /* Pelicula.swift */,
+				0E67BCD8234FDE33006A8EC1 /* Sala.swift */,
+				0E67BCDA234FDE45006A8EC1 /* Funcion.swift */,
+				0E67BCDC234FDE51006A8EC1 /* Cartelera.swift */,
+				0E67BCE0235010D8006A8EC1 /* Dulce.swift */,
+				0E67BCE2235010E2006A8EC1 /* Dulceria.swift */,
+			);
+			path = Modelo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +167,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E67BCE3235010E2006A8EC1 /* Dulceria.swift in Sources */,
+				0E67BCDD234FDE51006A8EC1 /* Cartelera.swift in Sources */,
+				0E67BCD7234FDE20006A8EC1 /* Pelicula.swift in Sources */,
 				0E67BCC6234FDB4C006A8EC1 /* ViewController.swift in Sources */,
 				0E67BCC2234FDB4C006A8EC1 /* AppDelegate.swift in Sources */,
+				0E67BCD9234FDE33006A8EC1 /* Sala.swift in Sources */,
+				0E67BCDB234FDE45006A8EC1 /* Funcion.swift in Sources */,
+				0E67BCDF235006F2006A8EC1 /* Decodificador.swift in Sources */,
 				0E67BCC4234FDB4C006A8EC1 /* SceneDelegate.swift in Sources */,
+				0E67BCE1235010D8006A8EC1 /* Dulce.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

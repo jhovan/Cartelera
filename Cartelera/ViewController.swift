@@ -9,12 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var cartelera: Cartelera?
+    var dulceria: Dulceria?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        (cartelera, dulceria) = Decodificador.leerBaseDeDatos()
     }
-
-
+    
+        
 }
+
+
 
