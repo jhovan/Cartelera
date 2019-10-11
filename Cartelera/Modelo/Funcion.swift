@@ -24,14 +24,14 @@ class Funcion: Codable {
     }
         
     // Devuelve el numero de boletos disponibles
-    func boletosDisponibles() -> Int {
+    func getBoletosDisponibles() -> Int {
         return self.sala.cupo - self.boletosVendidos
     }
     
     // Incrementa los boletos vendidos en caso de que haya suficientes
     // lanza una excepcion en caso contrario
     func venderBoletos(cantidad: Int) throws {
-        let disponibles = self.boletosDisponibles()
+        let disponibles = self.getBoletosDisponibles()
         if disponibles >= cantidad {
             self.boletosVendidos += cantidad
         }
