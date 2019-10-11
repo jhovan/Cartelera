@@ -33,6 +33,7 @@ class BoletosViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
         else {
             let alert = UIAlertController(title: "Ups", message: "No hay suficientes boletos disponibles para completar tu compra", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
             self.present(alert, animated: true)
         }
     }
@@ -55,7 +56,7 @@ class BoletosViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         self.ninos.dataSource = self
 
         
-        pickerData = [0,1,2,3,4,5,6,7,8,9,10]
+        pickerData = Array(0...100)
         // Do any additional setup after loading the view.
     }
     

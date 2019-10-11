@@ -12,6 +12,8 @@ class DetallesFuncionViewController: UIViewController {
 
     
     public var funcion: Funcion?
+    
+    
     @IBOutlet weak var imagen: UIImageView!
     @IBOutlet weak var titulo: UILabel!
     @IBOutlet weak var descripcionCelda: UILabel!

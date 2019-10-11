@@ -14,7 +14,7 @@ class BoletosTicketViewController: UIViewController {
     @IBOutlet weak var descripcion: UILabel!
     
     @IBAction func cerrar(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

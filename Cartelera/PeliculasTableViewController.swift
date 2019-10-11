@@ -18,10 +18,19 @@ class FuncionTableViewCell: UITableViewCell {
 class PeliculasTableViewController: UITableViewController {
 
     var cartelera: Cartelera?
+    @objc
+    func refresh(sender:AnyObject)
+    {
+        // Updating your data here...
+
+        self.tableView.reloadData()
+        self.refreshControl?.endRefreshing()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         cartelera = Decodificador.getCartelera()
         
         // Uncomment the following line to preserve selection between presentations
@@ -30,6 +39,7 @@ class PeliculasTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
 
     // MARK: - Table view data source
 
