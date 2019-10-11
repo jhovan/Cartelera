@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Peliculas-->
+        <!--Estas en cartelera-->
         <scene sceneID="7fd-gl-iQI">
             <objects>
                 <tableViewController id="L4P-ib-GLv" customClass="PeliculasTableViewController" customModule="Cartelera" customModuleProvider="target" sceneMemberID="viewController">
@@ -14,16 +14,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="Fyc-5E-fIx">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <items>
-                                <navigationItem title="Estas en cartelera" id="G3g-Bo-yX5"/>
-                            </items>
-                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaFuncion" rowHeight="181" id="t7G-zE-N5F" customClass="FuncionTableViewCell" customModule="Cartelera" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="320" height="181"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="181"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t7G-zE-N5F" id="zyf-Rl-u7d">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="181"/>
@@ -61,13 +54,13 @@
                             <outlet property="delegate" destination="L4P-ib-GLv" id="xd3-Qd-upU"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Peliculas" image="video" catalog="system" selectedImage="video.fill" id="tWU-1E-kGX"/>
+                    <navigationItem key="navigationItem" title="Estas en cartelera" id="cJO-gE-nEk"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WSb-m2-ceA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3331.875" y="-465.84507042253523"/>
+            <point key="canvasLocation" x="5326.875" y="-465.84507042253523"/>
         </scene>
-        <!--Dulces-->
+        <!--Estas en dulcería-->
         <scene sceneID="LZ2-jA-ZOy">
             <objects>
                 <tableViewController id="NlS-Vu-TDu" customClass="DulcesTableViewController" customModule="Cartelera" customModuleProvider="target" sceneMemberID="viewController">
@@ -75,18 +68,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="mb2-QZ-29e">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <items>
-                                <navigationItem title="Estas en dulceria" id="gEa-S7-Q36">
-                                    <barButtonItem key="rightBarButtonItem" title="Item" image="cart" catalog="system" id="sXT-wc-r1U"/>
-                                </navigationItem>
-                            </items>
-                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaDulce" rowHeight="122" id="8an-Kd-y5B" customClass="DulceTableViewCell" customModule="Cartelera" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="320" height="122"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="122"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8an-Kd-y5B" id="eZu-FB-47g">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="122"/>
@@ -124,30 +108,71 @@
                             <outlet property="delegate" destination="NlS-Vu-TDu" id="BZk-ct-U29"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Dulces" image="bag" catalog="system" selectedImage="bag.fill" id="Zra-Ad-E31"/>
+                    <navigationItem key="navigationItem" title="Estas en dulcería" id="ppg-zJ-Cff">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart" catalog="system" id="csL-Mx-jc1"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fED-aT-GY1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3331.875" y="268.3098591549296"/>
+            <point key="canvasLocation" x="5326.875" y="268.3098591549296"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Nmn-nR-OO0">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="XTf-rS-3ak" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="VS3-an-eJQ"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S4l-JJ-EfC">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="L4P-ib-GLv" kind="relationship" relationship="viewControllers" id="4ac-mj-wJ6"/>
-                        <segue destination="NlS-Vu-TDu" kind="relationship" relationship="viewControllers" id="o8e-mB-ToR"/>
+                        <segue destination="h2k-Oi-BSS" kind="relationship" relationship="viewControllers" id="4ac-mj-wJ6"/>
+                        <segue destination="RnV-Y4-ncK" kind="relationship" relationship="viewControllers" id="o8e-mB-ToR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6kO-2F-BZn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2334.375" y="-116.19718309859155"/>
+            <point key="canvasLocation" x="3331.875" y="-116.19718309859155"/>
+        </scene>
+        <!--Peliculas-->
+        <scene sceneID="KIy-Sg-A5F">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h2k-Oi-BSS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Peliculas" image="video" catalog="system" selectedImage="video.fill" id="tWU-1E-kGX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="e73-qZ-wib">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="L4P-ib-GLv" kind="relationship" relationship="rootViewController" id="aL6-Yr-Mdb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JmH-p7-Xl9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4329.375" y="-465.84507042253523"/>
+        </scene>
+        <!--Dulces-->
+        <scene sceneID="6h8-KH-m5N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RnV-Y4-ncK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Dulces" image="bag" catalog="system" selectedImage="bag.fill" id="Zra-Ad-E31"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="q1o-kO-apA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NlS-Vu-TDu" kind="relationship" relationship="rootViewController" id="spY-Ut-O9Z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mv8-dA-5NP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4329.375" y="268.3098591549296"/>
         </scene>
     </scenes>
     <resources>
