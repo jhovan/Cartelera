@@ -83,6 +83,10 @@ class PeliculasTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         tableView.deselectRow(at: indexPath, animated: false)
+    }
+    
     
     /*
     // Override to support conditional editing of the table view.
