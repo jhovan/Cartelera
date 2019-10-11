@@ -10,8 +10,7 @@ import UIKit
 
 class Decodificador {
     
-    static func leerBaseDeDatos() -> (Cartelera, Dulceria) {
-        
+    static func getCartelera() -> Cartelera {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
@@ -21,8 +20,6 @@ class Decodificador {
         var dictSalas: [Int: Sala] = [:]
         // Lista de funciones
         var listaFunciones: [Funcion] = []
-        // Lista de dulces
-        var listaDulces: [Dulce] = []
         
         // Leemos el json desde el archivo
         let asset = NSDataAsset(name: "data", bundle: Bundle.main)
@@ -62,6 +59,27 @@ class Decodificador {
             else {
                 print("No hay funciones")
             }
+        } else {
+            print("Json nulo")
+        }
+        
+        return Cartelera(funciones: listaFunciones)
+    }
+    
+    static func getDulceria() -> Dulceria {
+        
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
+
+        var listaDulces: [Dulce] = []
+        
+        // Leemos el json desde el archivo
+        let asset = NSDataAsset(name: "data", bundle: Bundle.main)
+        let json = try? JSONSerialization.jsonObject(with: asset!.data, options: JSONSerialization.ReadingOptions.allowFragments)
+        
+        // Leemos el json por partes
+        if let json = json as? [String: NSDictionary]{
             //Llenamos la lista de dulces
             if let dulces = json["dulces"] as? [String: NSDictionary] {
                     for (_, nsdictDulce) in dulces {
@@ -69,16 +87,16 @@ class Decodificador {
                         let dulce = try! JSONDecoder().decode(Dulce.self, from: data!)
                         listaDulces.append(dulce)
                     }
-                }
-                else {
-                    print("No hay dulces")
-                }
+            }
+            else {
+                print("No hay dulces")
+            }
             
         } else {
             print("Json nulo")
         }
         
-        return (Cartelera(funciones: listaFunciones), Dulceria(dulces: listaDulces))
+        return Dulceria(dulces: listaDulces)
     }
     
 }

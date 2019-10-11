@@ -10,4 +10,10 @@ import Foundation
 
 struct Dulceria {
     var dulces : [Dulce]
+    var carrito : Carrito
+    
+    init (dulces: [Dulce]) {
+        self.dulces = dulces
+        self.carrito =  Carrito()
+    }
 }
