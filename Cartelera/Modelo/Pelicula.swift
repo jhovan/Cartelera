@@ -16,4 +16,8 @@ struct Pelicula: Codable {
     var sinopsis: String
     var genero: String
     var valoracion: Double
+    
+    func getImageName() -> String {
+        return "movie_\(id)"
+    }
 }

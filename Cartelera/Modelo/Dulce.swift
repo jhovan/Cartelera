@@ -17,4 +17,8 @@ struct Dulce: Codable, Hashable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
+    
+    func getImageName() -> String {
+        return "snack_\(id)"
+    }
 }
