@@ -51,7 +51,7 @@
       "clasificacion": "B15",
       "duracion": 170,
       "sinopsis": "En el misterioso pueblo de Derry, un malvado payaso llamado Pennywise vuelve 27 años después para atormentar a los ya adultos miembros del Club de los Perdedores, que ahora están más alejados unos de otros.",
-      "genero": "Terror",
+      "genero": "Horror",
       "valoracion": 0.88
     }
   },
@@ -60,7 +60,7 @@
       "id": 1,
       "tipo": "IMAX",
       "cupo": 150,
-      "precio": 75
+      "precio": 80
     },
     "2": {
       "id": 2,

@@ -49,7 +49,11 @@ class Funcion: Codable {
     }
     
     func getDescripcionCelda () -> String {
-        return "Hora: \(hora)\nDuración \(pelicula.duracion) min.\nTipo de sala: \(sala.tipo) \nBoletos disponibles: \(getBoletosDisponibles())/ \(sala.cupo)\nPrecio: $ \(sala.precio)"
+        return "Hora: \(hora)\nDuración \(pelicula.duracion) min.\nTipo de sala: \(sala.tipo)\nPrecio: $ \(sala.precio)/$ \(sala.precio/2)\nBoletos disponibles: \(getBoletosDisponibles())/ \(sala.cupo)"
+    }
+    
+    func getDetalles() -> String {
+        return "Valoración: \(Int(pelicula.valoracion * 100))%\nGénero: \(pelicula.genero)\tClasificación: \(pelicula.clasificacion)\n\n\(pelicula.sinopsis)"
     }
 }
 

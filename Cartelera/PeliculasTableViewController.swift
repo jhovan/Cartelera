@@ -59,7 +59,14 @@ class PeliculasTableViewController: UITableViewController {
         return 180
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detallesFuncion" {
+            let viewController: DetallesFuncionViewController = segue.destination as! DetallesFuncionViewController
+            let indexPath = self.tableView.indexPathForSelectedRow
+            viewController.funcion = self.cartelera?.funciones[indexPath!.row]
+        }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
