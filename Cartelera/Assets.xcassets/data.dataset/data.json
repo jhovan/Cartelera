@@ -216,8 +216,18 @@
     },
     "3": {
       "id": 3,
-      "nombre": "Soda",
+      "nombre": "Refresco",
       "precio": 30
+    },
+    "4": {
+      "id": 4,
+      "nombre": "Icee",
+      "precio": 40
+    },
+    "5": {
+      "id": 5,
+      "nombre": "Doritos",
+      "precio": 25
     }
   }
 }
