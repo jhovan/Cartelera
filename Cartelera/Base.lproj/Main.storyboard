@@ -58,6 +58,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Estas en cartelera" id="cJO-gE-nEk"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="jAb-AZ-sAb">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
                 </tableViewController>
@@ -217,6 +218,7 @@
                                     <outlet property="imagen" destination="ZHd-8L-Qzo" id="yKS-GV-iPQ"/>
                                     <outlet property="precio" destination="01O-EE-8px" id="U3B-CP-7w8"/>
                                     <outlet property="titulo" destination="6qg-tY-Ugz" id="HRE-ok-8Zt"/>
+                                    <segue destination="tOk-wP-lqe" kind="presentation" identifier="detallesDulceSegue" id="Mva-bB-FjU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -226,7 +228,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Estas en dulcería" id="ppg-zJ-Cff">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart" catalog="system" id="csL-Mx-jc1"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart" catalog="system" id="csL-Mx-jc1">
+                            <connections>
+                                <segue destination="l6O-si-Xbm" kind="presentation" identifier="carritoSegue" id="qHo-Bi-cFq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fED-aT-GY1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -330,6 +336,117 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RQC-lg-vDk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7425" y="-467.95774647887322"/>
+        </scene>
+        <!--Detalles Dulce View Controller-->
+        <scene sceneID="55W-Pa-jlN">
+            <objects>
+                <viewController id="tOk-wP-lqe" customClass="DetallesDulceViewController" customModule="Cartelera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U2v-q4-8Ij">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wno-eZ-Njx">
+                                <rect key="frame" x="0.0" y="47" width="125" height="156"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWa-Er-sSs">
+                                <rect key="frame" x="139" y="47" width="165" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vnn-7r-gxw">
+                                <rect key="frame" x="139" y="76" width="165" height="127"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJX-VB-v3J">
+                                <rect key="frame" x="79" y="489" width="163" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Agregar al carrito"/>
+                                <connections>
+                                    <action selector="AgregarAlCarrito:" destination="tOk-wP-lqe" eventType="touchUpInside" id="tMo-mP-JCO"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q3u-65-EDh">
+                                <rect key="frame" x="0.0" y="306" width="320" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cantidad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjJ-sR-h0s">
+                                <rect key="frame" x="16" y="271" width="88" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="LZe-6y-WmV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nnh-07-fP2"/>
+                    <connections>
+                        <outlet property="cantidad" destination="q3u-65-EDh" id="i59-uu-bir"/>
+                        <outlet property="imagen" destination="wno-eZ-Njx" id="jFR-cL-Izh"/>
+                        <outlet property="nombre" destination="aWa-Er-sSs" id="SEl-sN-WGd"/>
+                        <outlet property="precio" destination="Vnn-7r-gxw" id="lb7-BN-77q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8F9-Pz-dIh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5327" y="1023"/>
+        </scene>
+        <!--Carrito View Controller-->
+        <scene sceneID="bjo-cn-j5P">
+            <objects>
+                <viewController id="l6O-si-Xbm" customClass="CarritoViewController" customModule="Cartelera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mPI-78-Wjm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="74" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3m-mt-msK">
+                                <rect key="frame" x="25" y="20" width="270" height="454"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xsb-05-NDb">
+                                <rect key="frame" x="211" y="489" width="84" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Comprar"/>
+                                <connections>
+                                    <action selector="comprer:" destination="l6O-si-Xbm" eventType="touchUpInside" id="MSC-mD-Azg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bc-Um-qlc">
+                                <rect key="frame" x="25" y="488" width="59" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Vaciar"/>
+                                <connections>
+                                    <action selector="vaciar:" destination="l6O-si-Xbm" eventType="touchUpInside" id="c0P-up-pOH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="q3m-mt-msK" firstAttribute="centerY" secondItem="Uzt-su-TlZ" secondAttribute="centerY" id="KBC-1L-mY3"/>
+                            <constraint firstItem="q3m-mt-msK" firstAttribute="centerX" secondItem="Uzt-su-TlZ" secondAttribute="centerX" id="fJf-f1-8Tj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Uzt-su-TlZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LeD-cB-aYv"/>
+                    <connections>
+                        <outlet property="texto" destination="q3m-mt-msK" id="WUB-cX-Wcb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CEB-ks-dgq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6022.5" y="267.25352112676057"/>
         </scene>
     </scenes>
     <resources>

@@ -58,6 +58,19 @@ class DulcesTableViewController: UITableViewController {
         return 122
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detallesDulceSegue" {
+            let viewController: DetallesDulceViewController = segue.destination as! DetallesDulceViewController
+            let indexPath = self.tableView.indexPathForSelectedRow
+            viewController.dulce = self.dulceria?.dulces[indexPath!.row]
+            viewController.carrito = self.dulceria?.carrito
+        }
+        if segue.identifier == "carritoSegue" {
+            let viewController: CarritoViewController = segue.destination as! CarritoViewController
+            viewController.carrito = self.dulceria?.carrito
+        }
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

@@ -55,7 +55,6 @@ class BoletosViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         self.ninos.delegate = self
         self.ninos.dataSource = self
 
-        
         pickerData = Array(0...100)
         // Do any additional setup after loading the view.
     }

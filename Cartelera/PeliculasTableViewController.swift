@@ -75,6 +75,12 @@ class PeliculasTableViewController: UITableViewController {
             let indexPath = self.tableView.indexPathForSelectedRow
             viewController.funcion = self.cartelera?.funciones[indexPath!.row]
         }
+        
+        if segue.identifier == "detallesFuncionSegue" {
+            let viewController: DetallesFuncionViewController = segue.destination as! DetallesFuncionViewController
+            let indexPath = self.tableView.indexPathForSelectedRow
+            viewController.funcion = self.cartelera?.funciones[indexPath!.row]
+        }
     }
     
     
