@@ -10,6 +10,7 @@ import UIKit
 
 class DetallesFuncionViewController: UIViewController {
 
+    
     public var funcion: Funcion?
     @IBOutlet weak var imagen: UIImageView!
     @IBOutlet weak var titulo: UILabel!
@@ -20,11 +21,17 @@ class DetallesFuncionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         titulo.text = funcion?.getTitulo()
         descripcionCelda.text = funcion?.getDescripcionCelda()
         imagen.image = UIImage(named: (funcion?.getImageName())!)
         detalles.text = funcion?.getDetalles()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "boletosSegue" {
+            let viewController: BoletosViewController = segue.destination as! BoletosViewController
+            viewController.funcion = self.funcion
+        }
     }
     
 

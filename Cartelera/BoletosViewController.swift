@@ -10,15 +10,39 @@ import UIKit
 
 class BoletosViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    public var funcion: Funcion?
+    var pickerData: [Int] = []
+    
     @IBOutlet weak var adultos: UIPickerView!
     @IBOutlet weak var ninos: UIPickerView!
     
     
+    
     @IBAction func confirmar(_ sender: Any) {
+        let disponibles = funcion?.getBoletosDisponibles()
+        let requeridos = adultos.selectedRow(inComponent: 0)   + ninos.selectedRow(inComponent: 0)
+        
+        if requeridos == 0 {
+            let alert = UIAlertController(title: "Ups", message: "Debes comprar al menos un boleto", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }
+        if requeridos <= disponibles! {
+            try! funcion?.venderBoletos(cantidad: requeridos)
+            performSegue(withIdentifier: "conditionSegue", sender: nil)
+        }
+        else {
+            let alert = UIAlertController(title: "Ups", message: "No hay suficientes boletos disponibles para completar tu compra", preferredStyle: .alert)
+            self.present(alert, animated: true)
+        }
     }
     
-    
-    var pickerData: [Int] = []
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "conditionSegue" {
+            let viewController: BoletosTicketViewController = segue.destination as! BoletosTicketViewController
+            viewController.transaccion = TransaccionBoletos(funcion: self.funcion!, cantidadAdultos: adultos.selectedRow(inComponent: 0), cantidadNinos: ninos.selectedRow(inComponent: 0))
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

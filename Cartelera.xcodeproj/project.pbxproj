@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0E293BF32350B6EA00DA5FC0 /* BoletosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E293BF22350B6EA00DA5FC0 /* BoletosViewController.swift */; };
+		0E293BF52350F33D00DA5FC0 /* BoletosTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E293BF42350F33D00DA5FC0 /* BoletosTicketViewController.swift */; };
+		0E293BF72350F49000DA5FC0 /* TransaccionBoletos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E293BF62350F49000DA5FC0 /* TransaccionBoletos.swift */; };
 		0E67BCC2234FDB4C006A8EC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E67BCC1234FDB4C006A8EC1 /* AppDelegate.swift */; };
 		0E67BCC4234FDB4C006A8EC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E67BCC3234FDB4C006A8EC1 /* SceneDelegate.swift */; };
 		0E67BCC9234FDB4C006A8EC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E67BCC7234FDB4C006A8EC1 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		0E293BF22350B6EA00DA5FC0 /* BoletosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoletosViewController.swift; sourceTree = "<group>"; };
+		0E293BF42350F33D00DA5FC0 /* BoletosTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoletosTicketViewController.swift; sourceTree = "<group>"; };
+		0E293BF62350F49000DA5FC0 /* TransaccionBoletos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransaccionBoletos.swift; sourceTree = "<group>"; };
 		0E67BCBE234FDB4C006A8EC1 /* Cartelera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cartelera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E67BCC1234FDB4C006A8EC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E67BCC3234FDB4C006A8EC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 				0E67BCEC23508639006A8EC1 /* DulcesTableViewController.swift */,
 				0E7FC06C2350AF6600735364 /* DetallesFuncionViewController.swift */,
 				0E293BF22350B6EA00DA5FC0 /* BoletosViewController.swift */,
+				0E293BF42350F33D00DA5FC0 /* BoletosTicketViewController.swift */,
 			);
 			path = Cartelera;
 			sourceTree = "<group>";
@@ -104,6 +109,7 @@
 				0E67BCE0235010D8006A8EC1 /* Dulce.swift */,
 				0E67BCE2235010E2006A8EC1 /* Dulceria.swift */,
 				0E67BCE4235065A8006A8EC1 /* Carrito.swift */,
+				0E293BF62350F49000DA5FC0 /* TransaccionBoletos.swift */,
 			);
 			path = Modelo;
 			sourceTree = "<group>";
@@ -179,7 +185,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E293BF72350F49000DA5FC0 /* TransaccionBoletos.swift in Sources */,
 				0E7FC06D2350AF6600735364 /* DetallesFuncionViewController.swift in Sources */,
+				0E293BF52350F33D00DA5FC0 /* BoletosTicketViewController.swift in Sources */,
 				0E67BCE3235010E2006A8EC1 /* Dulceria.swift in Sources */,
 				0E67BCDD234FDE51006A8EC1 /* Cartelera.swift in Sources */,
 				0E67BCD7234FDE20006A8EC1 /* Pelicula.swift in Sources */,

@@ -47,7 +47,7 @@
                                     <outlet property="descripcion" destination="X4S-LS-2eg" id="SIX-KA-Rbp"/>
                                     <outlet property="imagen" destination="4eV-gN-Pe5" id="To4-o9-tH3"/>
                                     <outlet property="titulo" destination="Cic-m8-wh2" id="iP9-bc-Mtc"/>
-                                    <segue destination="gOI-vQ-IfW" kind="presentation" identifier="detallesFuncion" id="iw5-go-qOg"/>
+                                    <segue destination="gOI-vQ-IfW" kind="presentation" identifier="detallesFuncionSegue" id="iw5-go-qOg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -101,7 +101,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Comprar"/>
                                 <connections>
-                                    <segue destination="7LD-Fu-eyG" kind="showDetail" id="hBJ-Fw-5Nf"/>
+                                    <segue destination="7LD-Fu-eyG" kind="presentation" identifier="boletosSegue" id="hBJ-Fw-5Nf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -167,11 +167,12 @@
                     <connections>
                         <outlet property="adultos" destination="4DE-nw-bcy" id="ZEj-6y-FDf"/>
                         <outlet property="ninos" destination="8K0-jq-9zW" id="tRt-6m-Naf"/>
+                        <segue destination="aXX-tD-Euy" kind="presentation" identifier="conditionSegue" id="jnG-7o-4j3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JMC-bM-xPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6722" y="-465"/>
+            <point key="canvasLocation" x="6737" y="-468"/>
         </scene>
         <!--Estas en dulcería-->
         <scene sceneID="LZ2-jA-ZOy">
@@ -287,28 +288,45 @@
             </objects>
             <point key="canvasLocation" x="4329.375" y="268.3098591549296"/>
         </scene>
-        <!--View Controller-->
+        <!--Boletos Ticket View Controller-->
         <scene sceneID="KMI-CG-fEC">
             <objects>
-                <viewController id="aXX-tD-Euy" sceneMemberID="viewController">
+                <viewController id="aXX-tD-Euy" customClass="BoletosTicketViewController" customModule="Cartelera" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cgR-pF-Tcn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLj-7w-qzy">
-                                <rect key="frame" x="77" y="127" width="46" height="30"/>
+                                <rect key="frame" x="266" y="18" width="30" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="X"/>
+                                <connections>
+                                    <action selector="cerrar:" destination="aXX-tD-Euy" eventType="touchUpInside" id="gC3-5V-hrs"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="74" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Aj-no-yRj">
+                                <rect key="frame" x="25" y="47" width="270" height="454"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4Aj-no-yRj" firstAttribute="centerX" secondItem="JgZ-q1-4tw" secondAttribute="centerX" id="0Gv-hn-SST"/>
+                            <constraint firstItem="4Aj-no-yRj" firstAttribute="centerY" secondItem="JgZ-q1-4tw" secondAttribute="centerY" id="REw-Rg-Ahy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JgZ-q1-4tw"/>
                     </view>
                     <navigationItem key="navigationItem" id="cKD-fa-lB1"/>
+                    <connections>
+                        <outlet property="descripcion" destination="4Aj-no-yRj" id="Kbh-xz-kXz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RQC-lg-vDk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7425" y="-467"/>
+            <point key="canvasLocation" x="7425" y="-467.95774647887322"/>
         </scene>
     </scenes>
     <resources>

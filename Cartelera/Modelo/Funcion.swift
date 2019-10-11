@@ -55,6 +55,18 @@ class Funcion: Codable {
     func getDetalles() -> String {
         return "Valoración: \(Int(pelicula.valoracion * 100))%\nGénero: \(pelicula.genero)\tClasificación: \(pelicula.clasificacion)\n\n\(pelicula.sinopsis)"
     }
+    
+    func getPrecio() -> Int {
+        return self.sala.precio
+    }
+    
+    func getSala() -> String {
+        return "\(self.sala.tipo) \(self.sala.id)"
+    }
+    
+    func getHora() -> String {
+        return self.hora
+    }
 }
 
 enum venderBoletosError: Error {
