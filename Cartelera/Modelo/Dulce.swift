@@ -8,8 +8,13 @@
 
 import Foundation
 
-struct Dulce: Codable {
+struct Dulce: Codable, Hashable {
     var id: Int
     var nombre: String
     var precio: Int
+    
+    // Funcion hash para conformar el protocolo hashable
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 }

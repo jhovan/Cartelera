@@ -20,6 +20,7 @@
 		0E67BCDF235006F2006A8EC1 /* Decodificador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E67BCDE235006F2006A8EC1 /* Decodificador.swift */; };
 		0E67BCE1235010D8006A8EC1 /* Dulce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E67BCE0235010D8006A8EC1 /* Dulce.swift */; };
 		0E67BCE3235010E2006A8EC1 /* Dulceria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E67BCE2235010E2006A8EC1 /* Dulceria.swift */; };
+		0E67BCE5235065A8006A8EC1 /* Carrito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E67BCE4235065A8006A8EC1 /* Carrito.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		0E67BCDE235006F2006A8EC1 /* Decodificador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decodificador.swift; sourceTree = "<group>"; };
 		0E67BCE0235010D8006A8EC1 /* Dulce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dulce.swift; sourceTree = "<group>"; };
 		0E67BCE2235010E2006A8EC1 /* Dulceria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dulceria.swift; sourceTree = "<group>"; };
+		0E67BCE4235065A8006A8EC1 /* Carrito.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrito.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				0E67BCDC234FDE51006A8EC1 /* Cartelera.swift */,
 				0E67BCE0235010D8006A8EC1 /* Dulce.swift */,
 				0E67BCE2235010E2006A8EC1 /* Dulceria.swift */,
+				0E67BCE4235065A8006A8EC1 /* Carrito.swift */,
 			);
 			path = Modelo;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				0E67BCDF235006F2006A8EC1 /* Decodificador.swift in Sources */,
 				0E67BCC4234FDB4C006A8EC1 /* SceneDelegate.swift in Sources */,
 				0E67BCE1235010D8006A8EC1 /* Dulce.swift in Sources */,
+				0E67BCE5235065A8006A8EC1 /* Carrito.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
