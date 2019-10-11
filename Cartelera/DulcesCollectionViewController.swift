@@ -18,7 +18,6 @@ class DulcesCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
 
         dulceria = Decodificador.getDulceria()
-        print(dulceria)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

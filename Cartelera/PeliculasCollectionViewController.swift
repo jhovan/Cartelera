@@ -18,7 +18,6 @@ class PeliculasCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         
         cartelera = Decodificador.getCartelera()
-        print(cartelera)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
