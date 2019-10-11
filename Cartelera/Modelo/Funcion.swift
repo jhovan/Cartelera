@@ -39,6 +39,18 @@ class Funcion: Codable {
             throw venderBoletosError.boletosInsuficientes(disponibles: disponibles)
         }
     }
+    
+    func getImagenName() -> String {
+        return pelicula.getImageName()
+    }
+    
+    func getTitulo() -> String {
+        return pelicula.titulo
+    }
+    
+    func getDescripcionCelda () -> String {
+        return "Hora: \(hora)\nDuración \(pelicula.duracion)\nTipo de sala: \(sala.tipo) \nBoletos disponibles: \(getBoletosDisponibles())/ \(sala.cupo)"
+    }
 }
 
 enum venderBoletosError: Error {
