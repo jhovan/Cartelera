@@ -16,6 +16,7 @@ class Carrito {
         self.dulces = [:]
     }
     
+    // Agrega un dulce en una cantidad dada
     func agregar(dulce: Dulce, cantidad: Int) {
         let dulceExists = dulces[dulce] != nil
         if dulceExists {
