@@ -7,6 +7,12 @@
 //
 
 import UIKit
+class DulceTableViewCell: UITableViewCell {
+    @IBOutlet weak var imagen: UIImageView!
+    @IBOutlet weak var titulo: UILabel!
+    @IBOutlet weak var precio: UILabel!
+    
+}
 
 class DulcesTableViewController: UITableViewController {
     
@@ -28,23 +34,30 @@ class DulcesTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return  1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return dulceria?.dulces.count ?? 0
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celdaDulce", for: indexPath) as! DulceTableViewCell
 
-        // Configure the cell...
+        let dulce = dulceria?.dulces[indexPath.row]
+        cell.titulo.text = dulce?.nombre
+        cell.precio.text = dulce?.getFormattedPrecio()
+        cell.imagen.image = UIImage(named: (dulce?.getImageName())!)
 
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 122
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

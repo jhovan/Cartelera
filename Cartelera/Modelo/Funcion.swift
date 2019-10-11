@@ -40,7 +40,7 @@ class Funcion: Codable {
         }
     }
     
-    func getImagenName() -> String {
+    func getImageName() -> String {
         return pelicula.getImageName()
     }
     
@@ -49,7 +49,7 @@ class Funcion: Codable {
     }
     
     func getDescripcionCelda () -> String {
-        return "Hora: \(hora)\nDuración \(pelicula.duracion)\nTipo de sala: \(sala.tipo) \nBoletos disponibles: \(getBoletosDisponibles())/ \(sala.cupo)"
+        return "Hora: \(hora)\nDuración \(pelicula.duracion) min.\nTipo de sala: \(sala.tipo) \nBoletos disponibles: \(getBoletosDisponibles())/ \(sala.cupo)\nPrecio: $ \(sala.precio)"
     }
 }
 

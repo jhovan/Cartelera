@@ -50,7 +50,7 @@ class PeliculasTableViewController: UITableViewController {
         let funcion = cartelera?.funciones[indexPath.row]
         cell.titulo.text = funcion?.getTitulo()
         cell.descripcion.text = funcion?.getDescripcionCelda()
-        cell.imagen.image = UIImage(named: (funcion?.getImagenName())!)
+        cell.imagen.image = UIImage(named: (funcion?.getImageName())!)
 
         return cell
     }

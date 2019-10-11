@@ -21,4 +21,8 @@ struct Dulce: Codable, Hashable {
     func getImageName() -> String {
         return "snack_\(id)"
     }
+    
+    func getFormattedPrecio () -> String {
+        return "Precio: $ \(precio)"
+    }
 }
