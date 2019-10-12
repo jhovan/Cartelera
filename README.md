@@ -5,6 +5,6 @@ Simulación de una aplicación de cine que permite comprar boletos y dulces.
 
 
 Notas:  
-Hay que actualizar la lista de funciones (arrastrando todo hacia abajo) para que se vean reflejado los cambios en los cupos de las funciones.  
-Soporta dark mode
+*Hay que actualizar la lista de funciones (arrastrando todo hacia abajo) para que se vean reflejado los cambios en los cupos.  
+*Soporta dark mode.
 
