@@ -28,7 +28,7 @@ class CarritoViewController: UIViewController {
     @IBAction func comprer(_ sender: Any) {
         carrito?.vaciar()
         
-        let alert = UIAlertController(title: "", message: "Gracias por tu compra, puedes recoger tus dulces una vez en la funcion", preferredStyle: .alert)
+        let alert = UIAlertController(title: "", message: "Gracias por tu compra, puedes recoger tus dulces una vez en la función", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: { (UIAlertAction) in
             self.dismiss(animated: true, completion: nil)
         }))
