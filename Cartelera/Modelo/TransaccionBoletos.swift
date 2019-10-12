@@ -24,7 +24,7 @@ struct TransaccionBoletos: CustomStringConvertible {
     
     
     public var description: String {
-        return "Número de transacción: \(TransaccionBoletos.id) \n\nPedido\n\n\nPelicula: \(funcion.getTitulo())\nHora: \(funcion.getHora())\n\nBoletos de adulto: \(cantidadAdultos)\nPrecio: $ \(funcion.getPrecio())\n\nBoletos de niño: \(cantidadNinos)\nPrecio: $ \(funcion.getPrecio()/2)\n\n\nTotal: $ \(self.total())"
+        return "Número de transacción: \(TransaccionBoletos.id) \n\nPedido\n\n\nPelicula: \(funcion.getTitulo())\nHora: \(funcion.getHora())\nSala: \(funcion.getSala())\n\nBoletos de adulto: \(cantidadAdultos)\nPrecio: $ \(funcion.getPrecio())\n\nBoletos de niño: \(cantidadNinos)\nPrecio: $ \(funcion.getPrecio()/2)\n\n\nTotal: $ \(self.total())"
     }
     
     public func total() -> Int {

@@ -71,7 +71,7 @@ class Funcion: Codable, Comparable {
     }
     
     func getSala() -> String {
-        return "\(self.sala.tipo) \(self.sala.id)"
+        return "\(self.sala.id), \(self.sala.tipo)"
     }
     
     func getHora() -> String {

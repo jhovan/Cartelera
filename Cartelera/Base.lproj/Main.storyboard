@@ -350,7 +350,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLj-7w-qzy">
-                                <rect key="frame" x="266" y="18" width="30" height="40"/>
+                                <rect key="frame" x="270" y="20" width="30" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="X"/>
                                 <connections>
@@ -367,9 +367,9 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="4Aj-no-yRj" firstAttribute="centerX" secondItem="JgZ-q1-4tw" secondAttribute="centerX" id="0Gv-hn-SST"/>
-                            <constraint firstItem="sLj-7w-qzy" firstAttribute="top" secondItem="JgZ-q1-4tw" secondAttribute="top" constant="18" id="DC0-MP-KgE"/>
                             <constraint firstItem="4Aj-no-yRj" firstAttribute="centerY" secondItem="JgZ-q1-4tw" secondAttribute="centerY" id="REw-Rg-Ahy"/>
-                            <constraint firstItem="sLj-7w-qzy" firstAttribute="leading" secondItem="JgZ-q1-4tw" secondAttribute="leading" constant="266" id="xRp-19-PQJ"/>
+                            <constraint firstItem="sLj-7w-qzy" firstAttribute="top" secondItem="JgZ-q1-4tw" secondAttribute="top" constant="20" id="bed-mf-t22"/>
+                            <constraint firstItem="JgZ-q1-4tw" firstAttribute="trailing" secondItem="sLj-7w-qzy" secondAttribute="trailing" constant="20" id="c0u-bc-URF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JgZ-q1-4tw"/>
                     </view>
