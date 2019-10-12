@@ -8,7 +8,8 @@
 
 import Foundation
 
-class Funcion: Codable {
+class Funcion: Codable, Comparable {
+    
     private var id: Int
     private var pelicula: Pelicula
     private var sala: Sala
@@ -23,6 +24,15 @@ class Funcion: Codable {
         self.boletosVendidos = boletosVendidos
     }
         
+    
+    static func < (lhs: Funcion, rhs: Funcion) -> Bool {
+        return (lhs.hora < rhs.hora) && (lhs.id < rhs.id)
+    }
+    
+    static func == (lhs: Funcion, rhs: Funcion) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
     // Devuelve el numero de boletos disponibles
     func getBoletosDisponibles() -> Int {
         return self.sala.cupo - self.boletosVendidos

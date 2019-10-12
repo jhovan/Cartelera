@@ -63,6 +63,8 @@ class Decodificador {
             print("Json nulo")
         }
         
+        listaFunciones.sort()
+        
         return Cartelera(funciones: listaFunciones)
     }
     
@@ -95,6 +97,8 @@ class Decodificador {
         } else {
             print("Json nulo")
         }
+        
+        listaDulces.sort()
         
         return Dulceria(dulces: listaDulces)
     }

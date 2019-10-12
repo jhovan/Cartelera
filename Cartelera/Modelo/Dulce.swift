@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct Dulce: Codable, Hashable {
+struct Dulce: Codable, Hashable, Comparable {
+    
     var id: Int
     var nombre: String
     var precio: Int
@@ -24,5 +25,9 @@ struct Dulce: Codable, Hashable {
     
     func getFormattedPrecio () -> String {
         return "Precio: $ \(precio)"
+    }
+    
+    static func < (lhs: Dulce, rhs: Dulce) -> Bool {
+        return lhs.id < rhs.id
     }
 }
