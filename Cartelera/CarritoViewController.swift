@@ -14,15 +14,29 @@ class CarritoViewController: UIViewController {
     
     @IBOutlet weak var texto: UILabel!
     
+    
+    @IBOutlet weak var botonVaciar: UIButton!
+    
     @IBAction func vaciar(_ sender: Any) {
         carrito?.vaciar()
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBOutlet weak var botonPagar: UIButton!
+
+
     @IBAction func comprer(_ sender: Any) {
         carrito?.vaciar()
-        self.dismiss(animated: true, completion: nil)
-
+        
+        let alert = UIAlertController(title: "", message: "Gracias por tu compra, puedes recoger tus dulces una vez en la funcion", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: { (UIAlertAction) in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true)
+        
+        
+        
     }
     
     
@@ -30,6 +44,10 @@ class CarritoViewController: UIViewController {
         super.viewDidLoad()
 
         texto.text = carrito?.description
+        if carrito?.getTotal() == 0 {
+            botonPagar.isEnabled = false
+            botonVaciar.isEnabled = false
+        }
     }
     
 
