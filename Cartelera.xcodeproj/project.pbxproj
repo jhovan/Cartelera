@@ -67,6 +67,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E4B707323F7DF570098CC12 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0E67BCEA23508620006A8EC1 /* PeliculasTableViewController.swift */,
+				0E7FC06C2350AF6600735364 /* DetallesFuncionViewController.swift */,
+				0E293BF22350B6EA00DA5FC0 /* BoletosViewController.swift */,
+				0E67BCEC23508639006A8EC1 /* DulcesTableViewController.swift */,
+				0E293BF42350F33D00DA5FC0 /* BoletosTicketViewController.swift */,
+				0E9831D323510EF600C272B7 /* DetallesDulceViewController.swift */,
+				0E82AC3D2351165800CB5244 /* CarritoViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0E4B707423F7DF8E0098CC12 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				0E67BCDE235006F2006A8EC1 /* Decodificador.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		0E67BCB5234FDB4C006A8EC1 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +108,8 @@
 		0E67BCC0234FDB4C006A8EC1 /* Cartelera */ = {
 			isa = PBXGroup;
 			children = (
+				0E4B707423F7DF8E0098CC12 /* Util */,
+				0E4B707323F7DF570098CC12 /* ViewControllers */,
 				0E67BCD5234FDDFB006A8EC1 /* Modelo */,
 				0E67BCC1234FDB4C006A8EC1 /* AppDelegate.swift */,
 				0E67BCC3234FDB4C006A8EC1 /* SceneDelegate.swift */,
@@ -93,14 +117,6 @@
 				0E67BCCA234FDB4E006A8EC1 /* Assets.xcassets */,
 				0E67BCCC234FDB4E006A8EC1 /* LaunchScreen.storyboard */,
 				0E67BCCF234FDB4E006A8EC1 /* Info.plist */,
-				0E67BCDE235006F2006A8EC1 /* Decodificador.swift */,
-				0E67BCEA23508620006A8EC1 /* PeliculasTableViewController.swift */,
-				0E67BCEC23508639006A8EC1 /* DulcesTableViewController.swift */,
-				0E7FC06C2350AF6600735364 /* DetallesFuncionViewController.swift */,
-				0E293BF22350B6EA00DA5FC0 /* BoletosViewController.swift */,
-				0E293BF42350F33D00DA5FC0 /* BoletosTicketViewController.swift */,
-				0E9831D323510EF600C272B7 /* DetallesDulceViewController.swift */,
-				0E82AC3D2351165800CB5244 /* CarritoViewController.swift */,
 			);
 			path = Cartelera;
 			sourceTree = "<group>";
